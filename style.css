@@ -1,4 +1,103 @@
-html, body {
-  height: 100%;
-  width: 100%;
+/*GLOBAL*/
+
+
+:root {
+  --bg-body: #151515;
+  --bg-contact: #242424; 
+  --accent: #4ee1A0;
+  --text2: #8d8b8d;
+  --text1: #ffffff;
+  --invalid: #ff6f5b;
+  --fs18: 1.25rem;
+  --fs88:  5.5rem;
+  --fs72: 4.5rem;
+  --fs40: 2.5rem;
+  --fs48: 3rem;
+  --fs32: 2rem;
+  --fs24: 1.5rem; 
+  --container: 69.375rem;
+  --transition: 300ms ease-in-out;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text1);
+  font-size: var(--fs18);
+  line-height: 1.56;
+  
+}
+
+
+a {
+   transition: color:var(--transition);
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.nav__text {
+  /*display: inline-block;*/
+  color: #D9D9D9; 
+}
+
+.wrapper {
+  width: calc(100% - 2rem); /*for mobile*/
+  max-width: var(--container);
+  margin-inline: auto;
+}
+@media (min-width: 37.5em) { /*600px* Tablet styles kick in from mobile*/
+  .wrapper{
+    width: calc(100% - 3.75rem);             
+  }  
+}
+
+/*HEADER*/
+.header{
+  
+}
+
+.header__nav{
+display-flex;
+flex-wrap: wrap;  
+}
+
+.nav__home{
+  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.02rem + 2.4vw, 2.5rem); /*Fluid Typography calculator*/
+  color: var(--text1);  
+}
+
+
+
+.nav_text { 
+  
+}
+.nav_button {
+  
+}
+.nav_button_resume {
+  
 }
